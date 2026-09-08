@@ -1,168 +1,111 @@
-
-"use client";
-
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  ArrowUpRight,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section
-      id="contato"
-      className="bg-[#FCFAF9]  px-6 py-24 lg:px-10"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id="contato" className="relative overflow-hidden bg-[#F8F7F2] py-20 px-6 lg:px-10">
+      {/* Decoração de fundo */}
+      <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-[#DDECE7]/80 blur-3xl" />
 
-        {/* Header */}
-        <Reveal className="mb-14 max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-forest-600">
-            Entre em contato
-          </p>
+      <div className="relative mx-auto max-w-7xl grid gap-12 lg:grid-cols-2">
+        
+        {/* Esquerda: Informações */}
+        <Reveal>
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-8 bg-[#16A892]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#064F4B]">
+              Contato
+            </span>
+          </div>
 
-          <h2 className="font-display text-3xl font-medium leading-tight text-ink sm:text-4xl lg:text-5xl">
-            Pronto para cuidar melhor do seu corpo?
+          <h2 className="font-display text-3xl font-medium text-[#064F4B] sm:text-4xl lg:text-5xl">
+            Pronto para viver <br />
+            <span className="italic text-[#16A892]">sem dor?</span>
           </h2>
 
-          <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-ink/60">
-            Agende sua avaliação e dê o primeiro passo para uma vida
-            com mais movimento, conforto e qualidade.
+          <p className="mt-6 text-base leading-relaxed text-[#064F4B]/70">
+            Entre em contato para agendar sua avaliação ou tirar qualquer dúvida. Estamos prontos para acolher você.
           </p>
-        </Reveal>
 
-        {/* Conteúdo */}
-        <div className="grid overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-forest-900/5 lg:grid-cols-[0.8fr_1.2fr]">
-
-          {/* Informações */}
-          <div className="flex flex-col justify-between p-8 sm:p-10 lg:p-12">
-
-            <div>
-              <h3 className="font-display text-2xl text-ink">
-                Vamos conversar?
-              </h3>
-
-              <p className="mt-3 text-sm leading-relaxed text-ink/55">
-                Estamos à disposição para tirar suas dúvidas e
-                encontrar o melhor tratamento para você.
-              </p>
-
-              {/* Informações */}
-              <div className="mt-10 space-y-6">
-
-                {/* Endereço */}
-                <div className="flex gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-ink">
-                      Endereço
-                    </p>
-
-                    <p className="mt-1 text-sm leading-relaxed text-ink/55">
-                      Rua das Flores, 123
-                      <br />
-                      São Paulo — SP
-                    </p>
-                  </div>
-                </div>
-
-                {/* Telefone */}
-                <div className="flex gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
-                    <Phone className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-ink">
-                      Telefone
-                    </p>
-
-                    <a
-                      href="tel:+5511999999999"
-                      className="mt-1 block text-sm text-ink/55 transition hover:text-forest-700"
-                    >
-                      (11) 99999-9999
-                    </a>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
-                    <Mail className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-ink">
-                      E-mail
-                    </p>
-
-                    <a
-                      href="mailto:contato@clinica.com"
-                      className="mt-1 block text-sm text-ink/55 transition hover:text-forest-700"
-                    >
-                      contato@clinica.com
-                    </a>
-                  </div>
-                </div>
-
-                {/* Horário */}
-                <div className="flex gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest-700">
-                    <Clock className="h-5 w-5" />
-                  </div>
-
-                  <div>
-                    <p className="text-sm font-semibold text-ink">
-                      Horário de atendimento
-                    </p>
-
-                    <p className="mt-1 text-sm leading-relaxed text-ink/55">
-                      Segunda a sexta
-                      <br />
-                      08:00 — 18:00
-                    </p>
-                  </div>
-                </div>
-
+          <div className="mt-10 space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-[#064F4B]">
+                <Phone className="h-5 w-5 text-[#16A892]" />
+              </div>
+              <div>
+                <p className="text-xs text-[#064F4B]/60">Telefone / WhatsApp</p>
+                <p className="font-semibold text-[#064F4B]">19 98151-0748</p>
               </div>
             </div>
 
-            {/* Botão */}
-            <a
-              href="#agendamento"
-              className="group mt-10 flex w-fit items-center gap-2 rounded-full bg-forest-700 px-6 py-3 text-sm font-medium text-white transition hover:bg-forest-800"
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-[#064F4B]">
+                <Mail className="h-5 w-5 text-[#16A892]" />
+              </div>
+              <div>
+                <p className="text-xs text-[#064F4B]/60">E-mail</p>
+                <p className="font-semibold text-[#064F4B]">dehpazoti@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-[#064F4B]">
+                <MapPin className="h-5 w-5 text-[#16A892]" />
+              </div>
+              <div>
+                <p className="text-xs text-[#064F4B]/60">Endereço</p>
+                <p className="font-semibold text-[#064F4B]">São Benedito, 150<br />Vila Fascina - Limeira - SP</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Direita: Formulário */}
+        <Reveal delay={150}>
+          <form className="rounded-3xl border border-[#064F4B]/10 bg-white p-8 shadow-xl shadow-[#064F4B]/5 backdrop-blur-sm space-y-6">
+            <div>
+              <label className="block text-xs font-semibold text-[#064F4B] uppercase tracking-wider mb-2">
+                Nome Completo
+              </label>
+              <input
+                type="text"
+                placeholder="Seu nome"
+                className="w-full rounded-2xl border border-[#064F4B]/15 bg-[#F8F7F2]/50 px-4 py-3 text-sm text-[#064F4B] outline-none transition-all focus:border-[#16A892] focus:bg-white"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-[#064F4B] uppercase tracking-wider mb-2">
+                WhatsApp
+              </label>
+              <input
+                type="tel"
+                placeholder="(00) 00000-0000"
+                className="w-full rounded-2xl border border-[#064F4B]/15 bg-[#F8F7F2]/50 px-4 py-3 text-sm text-[#064F4B] outline-none transition-all focus:border-[#16A892] focus:bg-white"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-[#064F4B] uppercase tracking-wider mb-2">
+                Como podemos ajudar?
+              </label>
+              <textarea
+                rows={4}
+                placeholder="Conte um pouco sobre o que você busca ou a dor que sente..."
+                className="w-full rounded-2xl border border-[#064F4B]/15 bg-[#F8F7F2]/50 px-4 py-3 text-sm text-[#064F4B] outline-none transition-all focus:border-[#16A892] focus:bg-white resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="group flex w-full items-center justify-center gap-2 rounded-full bg-[#16A892] py-4 text-sm font-medium text-white shadow-lg shadow-[#16A892]/20 transition-all hover:bg-[#064F4B]"
             >
-              Agendar avaliação
-
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </a>
-          </div>
-
-          {/* Mapa */}
-          <div className="relative min-h-[420px] lg:min-h-[600px]">
-
-            <iframe
-              title="Localização da clínica"
-              src="https://www.google.com/maps?q=São%20Paulo%2C%20SP&output=embed"
-              className="absolute inset-0 h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-
-            {/* Overlay */}
-            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/5" />
-
-          </div>
-        </div>
+              Enviar Mensagem
+              <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </button>
+          </form>
+        </Reveal>
       </div>
     </section>
   );
 }
-

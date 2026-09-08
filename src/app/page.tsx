@@ -1,26 +1,34 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Steps from "@/components/Steps";
-import HowItWorksTest from "@/components/HowItWorksTest";
-import Treatments from "@/components/Treatments";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import Benefits from "@/components/Benefits";
+import Cards from "@/components/Cards";
+import Services from "@/components/Services";
+import HowItWorks from "@/components/HowItWorks";
+import Faq from "@/components/Faq";
+import Testimonials from "@/components/Testimonials";
+import Treatments from "@/components/Treatments";
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FCFAF9]">
       <Header />
       <Hero />
-      <Steps />
-      <HowItWorksTest />
+      <Cards />
+      <Benefits />
+      
       <Treatments />
-      <About />
+       <About />
+      <HowItWorks />
+     
+      <Services />
+      <Faq />
       <Testimonials />
+       
       <Contact />
-      {/* <CTA /> */}
       <Footer />
     </main>
   );

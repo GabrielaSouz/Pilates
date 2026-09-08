@@ -1,140 +1,179 @@
 import Image from "next/image";
-import { ArrowUpRight, PlayCircle, ShieldCheck, Users, Dumbbell } from "lucide-react";
+import {
+  ArrowUpRight,
+  PlayCircle,
+  ShieldCheck,
+  Users,
+  Dumbbell,
+  Sparkles,
+} from "lucide-react";
 import Reveal from "./Reveal";
-
-const avatars = [
-  "https://i.pravatar.cc/64?img=47",
-  "https://i.pravatar.cc/64?img=12",
-  "https://i.pravatar.cc/64?img=32",
-];
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden px-6 pb-24 pt-14 lg:px-10 lg:pt-20">
-      {/* ambient background blobs */}
+    <section
+      id="top"
+      className="relative overflow-hidden bg-[#F8F7F2] px-6 pb-20 pt-12 lg:px-10 lg:pb-32 lg:pt-20"
+    >
+      {/* Background decoration with soft shapes */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-forest-200/40 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-64 h-96 w-96 rounded-full bg-forest-100/60 blur-3xl"
+        className="pointer-events-none absolute -left-40 top-10 h-[500px] w-[500px] rounded-full bg-[#DDECE7]/70 blur-3xl"
       />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-10">
-        {/* Left column */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-32 bottom-10 h-[600px] w-[600px] rounded-full bg-[#DDECE7]/50 blur-3xl"
+      />
+
+      
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        {/* =====================================================
+            LEFT CONTENT
+        ===================================================== */}
         <Reveal>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-forest-600">
-            Fisioterapia personalizada
-          </p>
-          <h1 className="font-display text-[2.6rem] font-medium leading-[1.08] tracking-tight text-ink text-balance sm:text-6xl">
-            Seu corpo não
+          {/* Eyebrow / Tag */}
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#16A892]/20 bg-white/70 px-4 py-1.5 backdrop-blur-sm">
+            <Sparkles className="h-3.5 w-3.5 text-[#16A892]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#064F4B]">
+              Pilates & Fisioterapia Integrada
+            </span>
+          </div>
+
+          {/* Title */}
+          <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-6xl lg:text-[4.2rem]">
+            Mais movimento,
             <br />
-            deveria limitar
+            <span className="text-[#064F4B]">menos dor,</span>
             <br />
-            <span className="italic text-forest-600">sua vida.</span>
+            <span className="italic text-[#16A892]">mais vida.</span>
           </h1>
-          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink/65">
-            Tratamentos personalizados para aliviar dores, recuperar
-            movimentos e devolver sua confiança no seu dia a dia.
+
+          {/* Description */}
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#064F4B]/75 sm:text-lg">
+            O Pilates e a fisioterapia trabalham juntos para fortalecer seu corpo, 
+            melhorar sua postura e devolver sua liberdade de movimento com um método 
+            exclusivo e acolhedor.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          {/* Buttons */}
+          <div className="mt-9 flex flex-wrap items-center gap-4 sm:gap-6">
             <a
               href="#contato"
-              className="group flex items-center gap-2 rounded-full bg-[#4F6D5A] px-6 py-3.5 text-sm font-medium text-cream shadow-md shadow-forest-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-800 hover:shadow-xl hover:shadow-forest-700/30"
+              className="group flex items-center gap-2.5 rounded-full bg-[#16A892] px-7 py-4 text-sm font-medium text-white shadow-lg shadow-[#16A892]/25 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#064F4B] hover:shadow-xl"
             >
               Agendar minha sessão
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
+
             <a
               href="#sobre"
-              className="group flex items-center gap-2 text-sm font-medium text-ink/80 transition-colors hover:text-forest-700"
+              className="group flex items-center gap-3 text-sm font-medium text-[#064F4B] transition-colors hover:text-[#16A892]"
             >
-              <PlayCircle className="h-5 w-5 text-forest-600 transition-transform duration-300 group-hover:scale-110" />
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#16A892]/30 bg-white/50 transition-all duration-300 group-hover:scale-105 group-hover:border-[#16A892]">
+                <PlayCircle className="h-5 w-5 text-[#16A892]" />
+              </span>
               Conhecer meu trabalho
             </a>
           </div>
 
-          <div className="mt-11 flex items-center gap-4">
-            {/* <div className="flex -space-x-3">
-              {avatars.map((src, i) => (
-                <span
-                  key={i}
-                  className="h-10 w-10 overflow-hidden rounded-full ring-2 ring-cream"
-                >
-                  <Image
-                    src={src}
-                    alt="Paciente atendido"
-                    width={40}
-                    height={40}
-                    className="h-full w-full object-cover"
-                  />
-                </span>
-              ))}
-            </div> */}
-            <p className="text-sm leading-snug text-ink/70">
-              <span className="font-semibold text-ink">+200 pessoas</span> já
-              transformaram
-              <br className="hidden sm:block" /> sua qualidade de vida
-            </p>
+          {/* =====================================================
+              CREDIBILITY / STATS
+          ===================================================== */}
+          <div className="mt-12 border-t border-[#064F4B]/10 pt-8">
+            <div className="grid grid-cols-3 gap-4 sm:flex sm:gap-10">
+              {/* Experience */}
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#DDECE7] text-[#064F4B]">
+                  <Dumbbell className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="font-display text-base font-semibold text-[#064F4B] sm:text-lg">
+                    +5 anos
+                  </p>
+                  <p className="text-xs text-[#064F4B]/60">
+                    de experiência
+                  </p>
+                </div>
+              </div>
+
+              {/* Patients */}
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#DDECE7] text-[#064F4B]">
+                  <Users className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="font-display text-base font-semibold text-[#064F4B] sm:text-lg">
+                    +200
+                  </p>
+                  <p className="text-xs text-[#064F4B]/60">
+                    vidas transformadas
+                  </p>
+                </div>
+              </div>
+
+              {/* CREFITO */}
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#DDECE7] text-[#064F4B]">
+                  <ShieldCheck className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="font-display text-base font-semibold text-[#064F4B] sm:text-lg">
+                    CREFITO
+                  </p>
+                  <p className="text-xs text-[#064F4B]/60">
+                    3/273680-F
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </Reveal>
 
-        {/* Right column: image + floating cards */}
-        <Reveal delay={150} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] rounded-tr-[6rem] border-8 border-cream shadow-2xl shadow-forest-900/10 sm:aspect-[9/10]">
-            <Image
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop"
-              alt="Fisioterapeuta atendendo paciente, avaliando o joelho"
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, 90vw"
-              className="object-cover"
+        {/* =====================================================
+            RIGHT - IMAGES & SHAPES
+        ===================================================== */}
+        <Reveal delay={150} className="relative mx-auto w-full max-w-lg lg:max-w-none">
+          <div className="relative">
+            {/* Main Image Frame with Organic Arch Shape */}
+            <div className="relative aspect-[4/5] overflow-hidden rounded-t-[12rem] rounded-b-[4rem] border-[10px] border-white bg-[#DDECE7] shadow-2xl shadow-[#064F4B]/10">
+              <Image
+                src="/hero.jpg"
+                alt="Prática de Pilates e Fisioterapia"
+                fill
+                priority
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+
+            {/* Floating Card */}
+            <div className="absolute -bottom-6 -left-6 max-w-[240px] rounded-3xl border border-white/80 bg-white/90 p-5 shadow-xl shadow-[#064F4B]/10 backdrop-blur-md sm:-left-8">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-[#16A892] text-white">
+                <Dumbbell className="h-5 w-5" />
+              </div>
+
+              <p className="font-display text-base font-medium leading-snug text-[#064F4B]">
+                Cuidado integral e personalizado.
+              </p>
+
+              <p className="mt-1.5 text-xs leading-relaxed text-[#064F4B]/60">
+                Sessões individuais focadas nas suas metas e dores.
+              </p>
+            </div>
+
+            {/* Decorative Outline Circle */}
+            <div
+              aria-hidden
+              className="absolute -right-6 -top-6 -z-10 h-36 w-36 rounded-full border-2 border-dashed border-[#16A892]/40"
             />
-          </div>
 
-          {/* Floating stat card 1 */}
-          <div className="absolute -top-6 -right-4 hidden w-40 animate-float items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl shadow-forest-900/10 backdrop-blur sm:flex">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-700">
-              <Dumbbell className="h-4 w-4" />
-            </span>
-            <p className="text-xs leading-tight text-ink/70">
-              <span className="block font-display text-lg font-medium text-ink">
-                +5
-              </span>
-              anos de experiência
-            </p>
-          </div>
-
-          {/* Floating stat card 2 */}
-          <div
-            className="absolute right-[-1.5rem] top-1/2 hidden w-40 -translate-y-1/2 animate-float items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl shadow-forest-900/10 backdrop-blur sm:flex"
-            style={{ animationDelay: "1.2s" }}
-          >
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-700">
-              <Users className="h-4 w-4" />
-            </span>
-            <p className="text-xs leading-tight text-ink/70">
-              <span className="block font-display text-lg font-medium text-ink">
-                +200
-              </span>
-              pacientes atendidos
-            </p>
-          </div>
-
-          {/* Floating stat card 3 */}
-          <div
-            className="absolute -bottom-6 right-2 hidden w-44 animate-float items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl shadow-forest-900/10 backdrop-blur sm:flex"
-            style={{ animationDelay: "2.4s" }}
-          >
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest-100 text-forest-700">
-              <ShieldCheck className="h-4 w-4" />
-            </span>
-            <p className="text-xs leading-tight text-ink/70">
-              <span className="block font-medium text-ink">CREFITO</span>
-              XXXXXX-F
-            </p>
+            {/* Delicate Corner Curved Line */}
+            <div
+              aria-hidden
+              className="absolute -bottom-10 right-8 h-28 w-28 rounded-full border-b-2 border-r-2 border-[#16A892]"
+            />
           </div>
         </Reveal>
       </div>

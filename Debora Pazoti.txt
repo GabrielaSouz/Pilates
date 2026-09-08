@@ -1,0 +1,22 @@
+Debora Pazoti
+
+| Cor                   | Hex       | Uso                    |
+| --------------------- | --------- | ---------------------- |
+| Verde petróleo escuro | `#064F4B` | títulos, textos fortes |
+| Verde turquesa        | `#16A892` | destaque, botões       |
+| Verde turquesa claro  | `#55BFAE` | detalhes               |
+| Verde bem claro       | `#DDECE7` | fundos e ícones        |
+| Creme                 | `#F8F7F2` | fundo principal        |
+| Branco                | `#FFFFFF` | cards                  |
+
+
+Crefito: 3/273680-F
+
+19 98151-0748
+São Benedito, 150
+Vila Fascina - Limeira - SP
+
+
+wave
+bg-#FCFAF9
+#e6ede3

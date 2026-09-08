@@ -1,69 +1,172 @@
-import { Search, Sprout, Dumbbell, ShieldCheck } from "lucide-react";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
-
-const items = [
+const steps = [
   {
-    title: "Avaliação",
-    description: "Entendemos sua dor, seu histórico e seus objetivos.",
-    icon: Search,
+    number: "01",
+    title: "Agendamento e Avaliação",
+    description: "Você entra em contato e agendamos uma avaliação minuciosa para entender seu histórico e dores.",
   },
   {
-    title: "Tratamento",
-    description: "Plano terapêutico personalizado com técnicas eficazes.",
-    icon: Sprout,
+    number: "02",
+    title: "Plano Personalizado",
+    description: "Elaboramos um programa exclusivo mesclando técnicas de Fisioterapia e Pilates.",
   },
   {
-    title: "Fortalecimento",
-    description: "Exercícios específicos para recuperar força e estabilidade.",
-    icon: Dumbbell,
+    number: "03",
+    title: "Prática Acompanhada",
+    description: "Início das sessões com supervisão individualizada, garantindo movimentos precisos e seguros.",
   },
   {
-    title: "Prevenção",
-    description: "Orientações para evitar recidivas e manter sua qualidade de vida.",
-    icon: ShieldCheck,
+    number: "04",
+    title: "Evolução e Vida Sem Dor",
+    description: "Acompanhamos seus resultados continuamente para devolver sua mobilidade e qualidade de vida.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className=" bg-[#FCFAF9] px-6 py-24 lg:px-10">
-    
-    
-      <div className="mx-auto max-w-7xl">
-        <Reveal className="mx-auto max-w-xl text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-forest-600">
-            Como funciona
-          </p>
-          <h2 className="font-display text-3xl font-medium text-ink sm:text-4xl">
-            Um método pensado{" "}
-            <span className="italic text-forest-600">para você</span>
+    <section className="relative overflow-hidden min-h-[600px] bg-[#e6ede3]/70 px-6 py-20 md:px-8 md:py-18">
+      {/* Background Image with Overlay */}
+      {/* <div className="pointer-events-none absolute inset-0">
+        <Image
+          src="/HowItWorksTest.png"
+          alt="Pilates background"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-10"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FCFAF9] via-[#FCFAF9]/95 to-[#FCFAF9]" />
+      </div> */}
+
+        {/* Header */}
+        <Reveal>
+        <div className="text-center mb-16">
+             <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-8 bg-[#16A892]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#064F4B]">
+              Passo a Passo
+            </span>
+            <span className="h-px w-8 bg-[#16A892]" />
+          </div>
+           <h2 className="font-display text-3xl font-medium leading-tight text-[#064F4B] sm:text-4xl lg:text-5xl">
+            Como funciona o seu{" "}
+            <span className="italic text-[#16A892]">tratamento</span>
           </h2>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#064F4B]/60 sm:text-base">
+            Cada etapa é cuidadosamente planejada para acompanhar sua evolução
+            e ajudar você a recuperar seus movimentos com mais segurança.
+          </p>
+        </div>
         </Reveal>
 
-        <div className="relative mt-16 grid grid-cols-2 gap-y-12 gap-x-6 sm:grid-cols-4 sm:gap-x-4">
-          {/* connecting line, desktop only */}
-          <div
-            aria-hidden
-            className="absolute left-[12.5%] right-[12.5%] top-9 hidden border-t border-dashed border-forest-900/20 sm:block"
-          />
-          {items.map((item, i) => (
-            <Reveal
-              key={item.title}
-              delay={i * 120}
-              className="group relative z-10 flex flex-col items-center text-center"
-            >
-              <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-cream-dark text-forest-700 ring-8 ring-cream transition-all duration-300 group-hover:-translate-y-1.5 group-hover:bg-forest-700 group-hover:text-cream">
-                <item.icon className="h-7 w-7" strokeWidth={1.5} />
-              </span>
-              <h3 className="mt-5 font-display text-lg font-medium text-ink">
-                {item.title}
-              </h3>
-              <p className="mt-2 max-w-[11rem] text-sm leading-relaxed text-ink/60">
-                {item.description}
-              </p>
-            </Reveal>
-          ))}
+
+      <div className="relative mx-auto max-w-7xl">       
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical Line */}
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-[#064F4B]/10 md:left-1/2" />
+
+          {/* Step 1 */}
+          <Reveal className="relative mb-12 md:mb-16">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
+              <div className="md:w-1/2 md:pr-12 md:text-right">
+                <div className="md:hidden">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                    01
+                  </div>
+                </div>
+                <h3 className="font-display text-2xl font-medium text-[#064F4B]">
+                  {steps[0].title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#064F4B]/70">
+                  {steps[0].description}
+                </p>
+              </div>
+              <div className="hidden md:flex md:w-12 md:h-12 md:items-center md:justify-center md:shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                  01
+                </div>
+              </div>
+              <div className="md:w-1/2 md:pl-12" />
+            </div>
+          </Reveal>
+
+          {/* Step 2 */}
+          <Reveal className="relative mb-12 md:mb-16">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
+              <div className="md:w-1/2 md:pr-12" />
+              <div className="hidden md:flex md:w-12 md:h-12 md:items-center md:justify-center md:shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                  02
+                </div>
+              </div>
+              <div className="md:w-1/2 md:pl-12">
+                <div className="md:hidden">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                    02
+                  </div>
+                </div>
+                <h3 className="font-display text-2xl font-medium text-[#064F4B]">
+                  {steps[1].title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#064F4B]/70">
+                  {steps[1].description}
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Step 3 */}
+          <Reveal className="relative mb-12 md:mb-16">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
+              <div className="md:w-1/2 md:pr-12 md:text-right">
+                <div className="md:hidden">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                    03
+                  </div>
+                </div>
+                <h3 className="font-display text-2xl font-medium text-[#064F4B]">
+                  {steps[2].title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#064F4B]/70">
+                  {steps[2].description}
+                </p>
+              </div>
+              <div className="hidden md:flex md:w-12 md:h-12 md:items-center md:justify-center md:shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                  03
+                </div>
+              </div>
+              <div className="md:w-1/2 md:pl-12" />
+            </div>
+          </Reveal>
+
+          {/* Step 4 */}
+          <Reveal className="relative">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
+              <div className="md:w-1/2 md:pr-12" />
+              <div className="hidden md:flex md:w-12 md:h-12 md:items-center md:justify-center md:shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                  04
+                </div>
+              </div>
+              <div className="md:w-1/2 md:pl-12">
+                <div className="md:hidden">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#DDECE7] text-sm font-bold text-[#064F4B]">
+                    04
+                  </div>
+                </div>
+                <h3 className="font-display text-2xl font-medium text-[#064F4B]">
+                  {steps[3].title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#064F4B]/70">
+                  {steps[3].description}
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

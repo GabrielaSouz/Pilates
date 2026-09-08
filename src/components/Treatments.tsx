@@ -1,142 +1,126 @@
-import {
-  Bone,
-  PersonStanding,
-  Footprints as Running,
-  HeartPulse,
-  Sparkles,
-  Activity,
-  Hand,
-  Brain,
-  Waves,
-  Users,
-  ArrowUpRight,
-} from "lucide-react";
+import { Heart, Zap, TrendingUp, CheckCircle, Sparkles, MessageCircle, ShieldCheck } from "lucide-react";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
-const treatments = [
+const items = [
   {
-    title: "Coluna",
-    description: "Dores na lombar, cervical, hérnia de disco, ciática e mais.",
-    icon: Bone,
-  },
-  {
-    title: "Joelho",
-    description: "Lesões, dores, pós-operatório e fortalecimento.",
-    icon: PersonStanding,
-  },
-  {
-    title: "Esportiva",
+    number: "01",
+    title: "Saúde Postural",
     description:
-      "Prevenção e tratamento de lesões para atletas e praticantes de atividade física, do amador ao competidor.",
-    icon: Running,
+      "Corrija desequilíbrios e fortaleça a coluna para uma postura perfeita no dia a dia.",
+    icon: Heart,
   },
   {
-    title: "Pós-operatório",
-    description: "Recuperação segura e orientada para cirurgias ortopédicas.",
-    icon: HeartPulse,
-  },
-  {
-    title: "Pilates Terapêutico",
+    number: "02",
+    title: "Energia e Disposição",
     description:
-      "Força, equilíbrio e consciência corporal com segurança, respeitando o momento de cada corpo.",
+      "Aumente sua resistência e vitalidade, recuperando o vigor para viver melhor.",
+    icon: Zap,
+  },
+  {
+    number: "03",
+    title: "Força Funcional",
+    description:
+      "Desenvolva músculos que realmente usamos, melhorando sua qualidade de vida.",
+    icon: TrendingUp,
+  },
+  {
+    number: "04",
+    title: "Alívio da Dor",
+    description:
+      "Reduza ou elimine dores crônicas através do movimento consciente e personalizado.",
+    icon: CheckCircle,
+  },
+  {
+    number: "05",
+    title: "Flexibilidade",
+    description:
+      "Recupere amplitude de movimento com segurança e progressão constante.",
     icon: Sparkles,
   },
   {
-    title: "Ombro e Mão",
-    description: "Tendinites, capsulite, lesões e reabilitação funcional.",
-    icon: Hand,
-  },
-  {
-    title: "Reabilitação Funcional",
+    number: "06",
+    title: "Equilíbrio Mental",
     description:
-      "Recuperação de movimento e força para retomar as atividades do dia a dia.",
-    icon: Activity,
-  },
-  {
-    title: "Dor Crônica",
-    description: "Abordagem multidisciplinar para dores persistentes.",
-    icon: Brain,
-  },
-  {
-    title: "Hidroterapia",
-    description:
-      "Exercícios em piscina aquecida para reduzir impacto e dor durante a recuperação.",
-    icon: Waves,
-  },
-  {
-    title: "Terceira Idade",
-    description: "Equilíbrio, mobilidade e prevenção de quedas.",
-    icon: Users,
+      "Controle respiratório e conexão mente-corpo para bem-estar total.",
+    icon: MessageCircle,
   },
 ];
 
-
 export default function Treatments() {
   return (
-    <section id="tratamentos" className="relative overflow-hidden bg-[#F7F4EF] px-6 py-24 lg:px-10">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-10 top-10 hidden text-forest-300/50 lg:block"
-      >
-        <svg width="140" height="220" viewBox="0 0 140 220" fill="none">
-          <path
-            d="M10 210 C 10 120, 60 90, 55 10"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
-          {Array.from({ length: 7 }).map((_, i) => (
-            <ellipse
-              key={i}
-              cx={30 + (i % 2) * 20}
-              cy={20 + i * 26}
-              rx="16"
-              ry="7"
-              transform={`rotate(${i % 2 === 0 ? -30 : 30} ${30 + (i % 2) * 20} ${20 + i * 26})`}
-              fill="currentColor"
-              opacity={0.5}
-            />
-          ))}
-        </svg>
-      </div>
-
+    <section
+      id="beneficios"
+      className="relative overflow-hidden bg-[#F8F7F2] px-5 py-20 sm:px-6 sm:py-24 lg:px-10 lg:py-32"
+    >
       <div className="mx-auto max-w-7xl">
-        <Reveal className="mx-auto max-w-xl text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-forest-600">
-            Tratamentos
+
+        {/* HEADER */}
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#064F4B]">
+            Benefícios
           </p>
-          <h2 className="font-display text-3xl font-medium text-ink sm:text-4xl">
-            Como posso te ajudar
+
+          <h2 className="font-display text-3xl font-medium leading-tight text-[#064F4B] sm:text-4xl lg:text-5xl">
+            Transformação do corpo,{" "}
+            <br /><span className="italic text-[#16A892]">paz da mente</span>
           </h2>
+
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#064F4B]/60 sm:text-base">
+            Cada sessão é pensada especificamente para você, trabalhando seus
+            objetivos e respeitando suas limitações físicas.
+          </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {treatments.map((t, i) => (
-            <Reveal key={t.title} delay={i * 90}>
-              <div className="group flex h-full flex-col items-center gap-4 rounded-3xl bg-white p-7 text-center shadow-sm ring-1 ring-forest-900/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-forest-900/10">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-50 text-forest-700 transition-colors duration-300 group-hover:bg-forest-700 group-hover:text-cream">
-                  <t.icon className="h-6 w-6" strokeWidth={1.6} />
-                </span>
-                <h3 className="font-display text-lg font-medium text-ink">
-                  {t.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-ink/60">
-                  {t.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        {/* CONTENT */}
+      
 
-        {/* <Reveal className="mt-12 flex justify-center">
-          <a
-            href="#tratamentos"
-            className="group flex items-center gap-2 rounded-full border border-forest-900/15 bg-cream px-6 py-3 text-sm font-medium text-ink transition-all duration-300 hover:border-forest-700 hover:bg-forest-700 hover:text-cream"
-          >
-            Ver todos os tratamentos
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </Reveal> */}
+          {/* LEFT CARDS */}
+          <div className="order-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:order-1 mt-8 md:mt-12">
+            {items.slice(0, 6).map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <Reveal key={item.number}>
+                  <div className="group relative rounded-[2rem] border border-[#064F4B]/10 bg-white p-6 shadow-[0_12px_40px_rgba(6,79,75,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_50px_rgba(6,79,75,0.1)] sm:p-7">
+
+                    <div className="absolute right-5 top-5 text-xs font-semibold tracking-widest text-[#064F4B]/20">
+                      {item.number}
+                    </div>
+
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DDECE7] text-[#064F4B] transition-all duration-300 group-hover:bg-[#16A892] group-hover:text-white">
+                      <Icon size={22} strokeWidth={1.8} />
+                    </div>
+
+                    <h3 className="font-display text-xl font-medium text-[#064F4B]">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-2 max-w-sm text-sm leading-6 text-[#064F4B]/60">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-5 h-px w-10 bg-[#064F4B]/20 transition-all duration-300 group-hover:w-16 group-hover:bg-[#16A892]/50" />
+
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+
+
+          {/* RIGHT CARDS */}
+     
+
+        {/* BOTTOM TEXT */}
+        <Reveal className="mx-auto mt-16 max-w-2xl text-center sm:mt-20">
+          <p className="text-sm leading-7 text-[#064F4B]/50">
+            Cada benefício é uma conquista sua. Com foco personalizado e acompanhamento contínuo,
+            transformamos seus objetivos em realidade.
+          </p>
+        </Reveal>
       </div>
+
     </section>
   );
 }
