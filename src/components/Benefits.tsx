@@ -3,12 +3,12 @@ import { CheckCircle2 } from "lucide-react";
 import Reveal from "./Reveal";
 
 const benefitsList = [
-  "Alívio das dores nas costas e articulações",
-  "Melhora significativa da postura e equilíbrio",
-  "Aumento da flexibilidade e do tônus muscular",
-  "Prevenção contra lesões futuras",
-  "Redução do estresse e aumento da vitalidade",
-  "Reabilitação pós-operatória acelerada",
+  "Para o idoso Funcionalidade",
+  "Para o atleta Desafio",
+  "Para o desanimado Motivação",
+  "Para o distraído Foco",
+  "Para o adolescente Organização",
+  "Para todos Solução",
 ];
 
 export default function Benefits() {
