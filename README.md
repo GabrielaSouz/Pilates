@@ -1,15 +1,18 @@
-# Fisio+ — Landing Page
+# Landing Page — Débora Pazoti | Fisioterapia e Pilates
 
-Landing page para clínica de fisioterapia, construída com **Next.js 14 (App Router)**, **React**, **TypeScript** e **Tailwind CSS**. Totalmente responsiva, com micro-interações (hover, scroll-reveal, elementos flutuantes) e respeito a `prefers-reduced-motion`.
+Landing page profissional para fisioterapeuta e instrutora de Pilates, construída com **Next.js 14 (App Router)**, **React**, **TypeScript** e **Tailwind CSS**. Totalmente responsiva, com animações de scroll, micro-interações e design moderno.
+
+## Sobre o Projeto
+
+Site institucional para Débora Pazoti, fisioterapeuta e instrutora de Pilates em Limeira - SP. O projeto apresenta serviços, benefícios do Pilates, depoimentos de pacientes e informações de contato de forma visual e acessível.
 
 ## Stack
 
 - Next.js 14 + App Router
 - React 18 + TypeScript
-- Tailwind CSS (tokens customizados: paleta verde "forest", tipografia serif/sans)
+- Tailwind CSS (paleta customizada: verde #064F4B, #16A892 e tons neutros)
 - [lucide-react](https://lucide.dev) para ícones
-- `next/font` (Fraunces + Inter) via Google Fonts
-- `next/image` com imagens remotas (Unsplash / Pravatar como placeholders)
+- `next/image` para otimização de imagens
 
 ## Como rodar
 
@@ -32,24 +35,50 @@ npm run start
 ```
 src/
   app/
-    layout.tsx       # fontes + metadata
-    page.tsx          # monta as seções
-    globals.css        # estilos globais + utilitário .reveal
+    layout.tsx       # layout global + metadata
+    page.tsx         # monta todas as seções
+    globals.css      # estilos globais
   components/
-    Header.tsx         # navbar sticky com menu mobile
-    Hero.tsx           # seção principal + cards flutuantes
-    Steps.tsx           # "01 / 02 / 03"
-    HowItWorks.tsx       # 4 etapas do método
-    Treatments.tsx        # grid de especialidades
-    About.tsx              # seção "sobre mim"
-    Testimonials.tsx        # carrossel de depoimentos (client component)
-    CTA.tsx                   # banner final de contato
-    Footer.tsx                 # rodapé
-    Reveal.tsx                  # wrapper com IntersectionObserver p/ animação on-scroll
+    Header.tsx       # navegação com menu mobile
+    Hero.tsx         # seção principal com imagem
+    Cards.tsx        # cards de destaque (Hero)
+    Benefits.tsx     # benefícios do Pilates
+    About.tsx        # seção sobre a profissional
+    Treatments.tsx   # tratamentos oferecidos
+    HowItWorks.tsx   # passo a passo do tratamento
+    Services.tsx     # serviços detalhados
+    Testimonials.tsx # carrossel de depoimentos
+    Faq.tsx          # perguntas frequentes
+    Contact.tsx      # formulário de contato
+    CTA.tsx          # call-to-action final
+    Footer.tsx       # rodapé
+    Reveal.tsx       # componente de animação ao scroll
 ```
 
-## Notas
+## Seções do Site
 
-- As imagens de exemplo vêm de `images.unsplash.com` e `i.pravatar.cc` — troque pelos ativos reais do cliente (fotos, retrato, avatares de pacientes) antes de publicar.
-- Os links do menu (`#sobre`, `#tratamentos`, etc.) fazem scroll suave até as respectivas seções (`scroll-behavior: smooth` já está em `globals.css`).
-- Cores, tipografia e demais tokens estão centralizados em `tailwind.config.ts` (`theme.extend.colors.forest`, `fontFamily.display/sans`).
+- **Hero**: Apresentação principal com imagem e call-to-action
+- **Cards**: Destaques rápidos dos principais benefícios
+- **Benefits**: Benefícios detalhados do Pilates
+- **About**: Informações sobre Débora Pazoti
+- **Treatments**: Tratamentos disponíveis
+- **HowItWorks**: 4 etapas do processo de tratamento
+- **Services**: Serviços oferecidos
+- **Testimonials**: Depoimentos de pacientes com carrossel
+- **FAQ**: Perguntas frequentes
+- **Contact**: Formulário de contato + informações (WhatsApp, email, endereço)
+- **CTA**: Banner final de conversão
+
+## Cores e Design
+
+- **Primária**: #064F4B (verde escuro)
+- **Secundária**: #16A892 (verde claro)
+- **Acento**: #DDECE7 (verde bem claro)
+- **Fundo**: #F8F7F2 (off-white)
+- **Tipografia**: Fontes modernas e legíveis
+
+## Contato
+
+- **Telefone/WhatsApp**: 19 98151-0748
+- **Email**: dehpazoti@gmail.com
+- **Endereço**: São Benedito, 150, Vila Fascina - Limeira - SP
