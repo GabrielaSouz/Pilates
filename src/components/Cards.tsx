@@ -13,11 +13,11 @@ const features = [
         title: "Cuidado Humanizado",
         description: "Sessões focadas no seu bem-estar integral, respeitando seus limites e no seu ritmo.",
     },
-    {
-        icon: Home,
-        title: "Atendimento Domiciliar",
-        description: "Atendimento personalizado em domicílio, proporcionando mais conforto, praticidade e cuidado para sua saúde."
-    },
+    // {
+    //     icon: Home,
+    //     title: "Atendimento Domiciliar",
+    //     description: "Atendimento personalizado em domicílio, proporcionando mais conforto, praticidade e cuidado para sua saúde."
+    // },
     {
         icon: Target,
         title: "Foco na Causa da Dor",
@@ -44,7 +44,7 @@ export default function Cards() {
                 </div>
 
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {features.map((item, index) => {
                         const Icon = item.icon;
                         return (

@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
 
           {/* Title */}
-          <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-6xl lg:text-[4.2rem]">
+          <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-5xl lg:text-[4.2rem]">
             Mais movimento,
             <br />
             <span className="text-[#064F4B]">menos dor,</span>

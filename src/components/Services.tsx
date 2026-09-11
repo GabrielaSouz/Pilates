@@ -2,27 +2,50 @@ import { ArrowUpRight, Check } from "lucide-react";
 import Reveal from "./Reveal";
 
 const plans = [
-  {
-    title: "Aulas de Pilates em Grupo ",
-    subtitle: "Máximo 4 alunos",
-    description: "Ideal para quem busca prevenção, fortalecimento postural e condicionamento em um ambiente tranquilo.",
-    features: ["2x por semana", "Aparelhos completos", "Avaliação postural inclusa", "Horários flexíveis"],
-    highlighted: false,
-  },
-  {
-    title: "Aulas de Pilates Personal",
-    subtitle: "Casal ou individual",
-    description: "Foco total na reabilitação de dores crônicas, hérnias e pós-operatório com acompanhamento exclusivo.",
-    features: ["Atendimento VIP individual", "Protocolo de dor personalizado", "Terapia manual inclusa", "Reavaliações mensais"],
-    highlighted: true,
-  },
-  {
-    title: "Terapia Manual",
-    subtitle: "Manobras manuais, Ventosas, Dry needling",
-    description: "Avaliação física e biofuncional completa para traçar seu plano de tratamento e aula experimental.",
-    features: ["Análise de mobilidade", "Diagnóstico funcional", "Relatório de evolução", "Sessão experimental"],
-    highlighted: false,
-  },
+
+{
+  title: "Aulas de Pilates em Grupo",
+  subtitle: "Máximo de 4 alunos",
+  description:
+    "Ideal para quem busca prevenção, fortalecimento postural e condicionamento em um ambiente tranquilo e acolhedor.",
+  features: [
+    "1x, 2x ou 3x por semana",
+    "Aparelhos completos",
+    "Avaliação postural inclusa",
+    "Horários flexíveis",
+  ],
+  highlighted: false,
+},
+
+{
+  title: "Pilates Personal",
+  subtitle: "Individual ou em dupla",
+  description:
+    "Acompanhamento exclusivo para quem busca reabilitação, alívio de dores e fortalecimento de forma personalizada.",
+  features: [
+    "Atendimento individualizado",
+    "Protocolo personalizado",
+    "Terapia manual inclusa",
+    "Reavaliações mensais",
+  ],
+  highlighted: true,
+},
+
+{
+  title: "Terapia Manual",
+  subtitle: "Manobras manuais, ventosas e dry needling",
+  description:
+    "Alívio da dor, redução de tensões e melhora da mobilidade por meio de técnicas escolhidas de acordo com as necessidades do seu corpo.",
+  features: [
+    "Avaliação física e funcional",
+    "Liberação de tensões e pontos de dor",
+    "Técnicas personalizadas",
+    "Atendimento individual",
+  ],
+  highlighted: false,
+},
+
+
 ];
 
 export default function Services() {

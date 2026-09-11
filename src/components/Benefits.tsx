@@ -43,10 +43,12 @@ export default function Benefits() {
             </span>
           </div>
 
-          <h2 className="font-display text-3xl font-medium leading-tight text-[#064F4B] sm:text-4xl lg:text-5xl">
-            Transforme sua saúde <br />
-            <span className="italic text-[#16A892]">de dentro para fora.</span>
-          </h2>
+          <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-6xl lg:text-[4.2rem]">
+            Por que praticar
+            <br />
+
+            <span className="italic text-[#16A892]"> transforme sua saúde.</span>
+          </h1>
 
           <p className="mt-6 text-base leading-relaxed text-[#064F4B]/70">
             A união da fisioterapia com o Pilates traz resultados profundos para a sua saúde física e mental. Cada exercício é adaptado para atender às suas necessidades com segurança.

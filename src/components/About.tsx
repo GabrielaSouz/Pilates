@@ -22,15 +22,15 @@ export default function About() {
           </h2>
 
           <p className="mt-6 text-base leading-relaxed text-[#064F4B]/70">
-            Olá! Sou especialista em Fisioterapia Neurofuncional e Pilates Clínico. Minha missão é guiar pessoas a redefinirem sua relação com o corpo, oferecendo um espaço de escuta, cuidado técnico e movimento consciente.
+            Olá! Eu sou a Debora Pazoti, especialista em Fisioterapia Ortopédica. Minha missão é guiar pessoas a redefinirem sua relação com o corpo, oferecendo um espaço de escuta, cuidado técnico e movimento consciente.
           </p>
 
           {/* Destaques de Conquista */}
           <div className="mt-8 grid gap-6 sm:grid-cols-3 border-t border-[#064F4B]/10 pt-8">
             <div className="space-y-1">
               <GraduationCap className="h-6 w-6 text-[#16A892] mb-2" />
-              <h4 className="font-semibold text-[#064F4B]">Formação</h4>
-              <p className="text-xs text-[#064F4B]/60">Pós-graduada em Pilates Clínico</p>
+              <h4 className="font-semibold text-[#064F4B]">Pós-graduanda</h4>
+              <p className="text-xs text-[#064F4B]/60">Prescrição de Exercícios Terapêuticos</p>
             </div>
 
             <div className="space-y-1">

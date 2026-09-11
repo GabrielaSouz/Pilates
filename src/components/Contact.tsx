@@ -54,7 +54,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-xs text-[#064F4B]/60">Endereço</p>
-                <p className="font-semibold text-[#064F4B]">São Benedito, 150<br />Vila Fascina - Limeira - SP</p>
+                <p className="font-semibold text-[#064F4B]">Rua Maestro Artur Giambeli, 05<br />Jardim Santa Cecília - Limeira - SP</p>
               </div>
             </div>
           </div>
