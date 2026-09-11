@@ -20,9 +20,9 @@ export default function Benefits() {
       <div className="relative mx-auto max-w-7xl grid items-center gap-12 lg:grid-cols-2">
         {/* Imagem com linhas delicadas */}
         <Reveal className="relative order-2 lg:order-1">
-          <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden rounded-[3rem] border-8 border-white bg-[#DDECE7] shadow-xl shadow-[#064F4B]/5">
+          <div className="relative aspect-[4/3] sm:aspect-[12/11] overflow-hidden rounded-[3rem] border-8 border-white bg-[#DDECE7] shadow-xl shadow-[#064F4B]/5">
             <Image
-              src="/porque.jpg"
+              src="/imagem2.jpeg"
               alt="Instrução de Pilates e Alongamento"
               fill
               className="object-cover"
@@ -39,15 +39,16 @@ export default function Benefits() {
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-[#16A892]" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#064F4B]">
-              Por que praticar
+              Por que praticar Pilates?
             </span>
+             <span className="h-px w-8 bg-[#16A892]" />
           </div>
 
-          <h1 className="max-w-2xl font-display text-4xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-6xl lg:text-[4.2rem]">
-            Por que praticar
+          <h1 className="max-w-2xl font-display text-3xl font-medium leading-[1.08] tracking-tight text-[#064F4B] sm:text-4xl lg:text-5xl">
+            Seu corpo merece
             <br />
 
-            <span className="italic text-[#16A892]"> transforme sua saúde.</span>
+            <span className=" text-[#16A892]"> mais movimento.</span>
           </h1>
 
           <p className="mt-6 text-base leading-relaxed text-[#064F4B]/70">

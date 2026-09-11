@@ -37,7 +37,7 @@ export default function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#16A892]/20 bg-white/70 px-4 py-1.5 backdrop-blur-sm">
             <Sparkles className="h-3.5 w-3.5 text-[#16A892]" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#064F4B]">
-              Pilates & Fisioterapia Integrada
+              Fisioterapia & Pilates
             </span>
           </div>
 
@@ -47,12 +47,17 @@ export default function Hero() {
             <br />
             <span className="text-[#064F4B]">menos dor,</span>
             <br />
-            <span className="italic text-[#16A892]">mais vida.</span>
+            <span className="text-[#16A892]">mais vida.</span>
           </h1>
 
           {/* Description */}
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-[#064F4B]/75 sm:text-lg">
+          {/* <p className="mt-6 max-w-lg text-base leading-relaxed text-[#064F4B]/75 sm:text-lg">
             O Pilates e a fisioterapia trabalham juntos para fortalecer seu corpo, 
+            melhorar sua postura e devolver sua liberdade de movimento com um método 
+            exclusivo e acolhedor.
+          </p> */}
+          <p className="mt-6 text-base leading-relaxed text-[#064F4B]/70 sm:text-lg">
+             O Pilates e a fisioterapia trabalham juntos para fortalecer seu corpo, 
             melhorar sua postura e devolver sua liberdade de movimento com um método 
             exclusivo e acolhedor.
           </p>
@@ -90,7 +95,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="font-display text-base font-semibold text-[#064F4B] sm:text-lg">
-                    +5 anos
+                    +8 anos
                   </p>
                   <p className="text-xs text-[#064F4B]/60">
                     de experiência
@@ -139,12 +144,12 @@ export default function Hero() {
             {/* Main Image Frame with Organic Arch Shape */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-t-[12rem] rounded-b-[4rem] border-[10px] border-white bg-[#DDECE7] shadow-2xl shadow-[#064F4B]/10">
               <Image
-                src="/hero.jpg"
+                src="/imagem1.jpeg"
                 alt="Prática de Pilates e Fisioterapia"
                 fill
                 priority
                 sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className=" transition-transform duration-700 hover:scale-105"
               />
             </div>
 

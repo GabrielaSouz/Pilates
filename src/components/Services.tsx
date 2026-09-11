@@ -63,7 +63,7 @@ export default function Services() {
           </div>
 
           <h2 className="font-display text-3xl font-medium text-[#064F4B] sm:text-4xl">
-            Escolha o cuidado ideal para o seu momento
+            Encontre o cuidado ideal para você
           </h2>
         </Reveal>
 

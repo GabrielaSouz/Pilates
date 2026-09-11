@@ -16,19 +16,27 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#FCFAF9]">
       <Header />
+
       <Hero />
-      <Cards />
+
       <Benefits />
-      
+
       <Treatments />
-       <About />
-      <HowItWorks />
-     
+
+ <HowItWorks />
+ 
       <Services />
-      <Faq />
+
+      <About />
+
+     
+
       <Testimonials />
-       
+
+      <Faq />
+
       <Contact />
+
       <Footer />
     </main>
   );

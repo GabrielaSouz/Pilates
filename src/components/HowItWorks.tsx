@@ -51,8 +51,8 @@ export default function HowItWorks() {
             <span className="h-px w-8 bg-[#16A892]" />
           </div>
            <h2 className="font-display text-3xl font-medium leading-tight text-[#064F4B] sm:text-4xl lg:text-5xl">
-            Como funciona o seu{" "}
-            <span className="italic text-[#16A892]">tratamento</span>
+            Seu cuidado,{" "}
+            <span className="text-[#16A892]"> passo a passo</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#064F4B]/60 sm:text-base">
             Cada etapa é cuidadosamente planejada para acompanhar sua evolução
